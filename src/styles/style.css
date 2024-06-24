@@ -1,0 +1,228 @@
+:root {
+    --blue-strong: rgb(36, 41, 49);
+    --text-color: rgb(228, 228, 228);
+    --blue-child: rgb(34, 123, 238);
+}
+
+@font-face {
+    font-family: paragraph;
+    src: url('../assets/fonts/instagram-sans.ttf');
+}
+
+@font-face {
+    font-family: feature;
+    src: url('../assets/fonts/instagram-sans-bold.ttf');
+}
+
+@font-face {
+    font-family: wonderfull;
+    src: url('../assets/fonts/instagram-sans-headline.otf');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: paragraph;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--blue-strong);
+    padding: 8px 16px;
+}
+
+
+header {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.title-site {
+    color:  var(--text-color);
+    font-weight: 500;
+}
+
+.letters-blue {
+    font-family: wonderfull;
+    color: var(--blue-child);
+}
+
+ul {
+    padding: 10px 20px;
+    display: flex;
+    align-items: end;
+}
+
+.btn-download {
+    margin-left: auto;
+    background-color: var(--blue-child);
+    padding: 8px 16px;
+    text-decoration: none;
+    color: var(--text-color);
+    border: 1px solid var(--blue-child);
+    border-radius: 5px;
+}
+
+.main-site {
+    width: 50%;
+    height: 400px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main-site img {
+    width: 200px;
+    height: 200px;
+}
+
+.main-site div {
+    width: 100%;
+    height: 80%;    
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start ;
+    justify-content: center;
+}
+
+.main-site div p {
+    font-size: 28pt;
+    font-family: feature;
+    color: var(--text-color);
+}
+
+.main-site div a {
+    margin-top: 20px;
+}
+
+.post {
+    width: 70%;
+    height: fit-content;
+    margin: 10px auto;
+    padding-bottom: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.content{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    text-align: justify;
+    color: var(--text-color);
+}
+
+.title-question {
+    font-family: feature;
+    color: var(--text-color);
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+ol{
+    padding-left: 20px;
+}
+
+.card-question {
+    width: 170px;
+    height: 170px;
+    background-color: wite;
+    rotate: -90grad;
+    border-radius: 8px;
+    background-color: var(--text-color);
+}
+
+.btn {
+    display: block;
+    width: fit-content;
+    height: 30px;
+    background-color: var(--blue-child);
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 32px;
+    border-radius: 5px;
+    margin-top: 10px;   
+}
+
+.card-primary {
+    width: 170px;
+    height: 170px;
+    background-color: var(--blue-child);
+    
+    rotate: 60grad;
+    animation-name: rotate;
+    animation-duration: 3s;
+    border-radius: 8px;
+    font-size: 34pt;
+    font-family: wonderfull;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    color: var(--text-color);
+}
+
+.card-primary p {
+    rotate: 30grad;
+    font-family: wonderfull;
+}
+
+@keyframes rotate {
+    0% {
+        rotate: 0grad;
+    }
+    100% {
+        rotate: 460grad;
+    }
+}
+
+@media screen and (max-width: 460px){
+    header a {
+        display: none;
+    }
+    
+    .main-site {
+        flex-direction: column;
+        width: 100%;
+        height: fit-content;
+    }
+
+    .main-site div {
+        display: block;
+        padding: 20px;
+    }
+
+    #letters-dynamic {
+        font-size: 18pt;
+    }
+
+    .main-site div p {
+        margin-bottom: 30px;
+    }
+    .post {
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        padding: 0;
+        margin-bottom: 40px;
+    }
+     .content {
+        width: 100%;
+    }
+    .card-question {
+        margin-top: 40px;
+    }
+}
